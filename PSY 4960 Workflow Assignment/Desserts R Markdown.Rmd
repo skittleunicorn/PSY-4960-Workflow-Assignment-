@@ -1,0 +1,22 @@
+---
+title: "Desserts"
+author: "Emma Estrella"
+date: "11/21/2021"
+output: html_document
+---
+
+1) Upload the data
+```{r}
+Desserts <- read.csv("C:/Users/8estr/Desktop/PSY 4960 Workflow Assignment/Desserts.csv")
+View(Desserts)
+```
+2) Summarize columns
+```{r}
+summary(Desserts)
+```
+3) Visual representation of data
+```{r}
+library(ggplot2)
+ggplot(Desserts, aes(Rating, Quantity, color=Desserts)) +geom_point() + theme_bw() + ylab(label="Quantity (g)")
+```
+
